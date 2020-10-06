@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #4056A1;
+  height: 120px;
+  padding: 1.5em;
+}
+
+
+#brand {
+  font-family: "Bungee", "cursive";
+  font-size: 40px;
+  
+}
+
+#icon {
+  display:flex;
+  justify-content:center;
+  color:orangered;
+}

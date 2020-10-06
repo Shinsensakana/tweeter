@@ -1,0 +1,40 @@
+.new-tweet {
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Bungee", "cursive";
+}
+
+#compose {
+  text-align:center;
+} 
+
+#tweetprompt {
+    
+  font-family:"Source Sans Pro", "sans-serif";
+  font-weight: 700;
+}
+#tweet-text {
+  
+  width: 100%;
+  background-color:transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  font-family:"Source Sans Pro", "sans-serif";
+  margin:0.5em 0 1em 0;
+}
+
+#tweetandcount {
+  display:flex;
+  justify-content: space-between;
+}
+
+#tweetbutton {
+  background-color:#4056A1;
+  color:white;
+}
+
+
+
+
