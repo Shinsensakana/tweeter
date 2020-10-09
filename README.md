@@ -18,4 +18,5 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 !["Screenshot of fullsize screen"] https://github.com/Shinsensakana/tweeter/blob/master/docs/Screenshot%20from%202020-10-08%2020-50-17.png
+
 !["Screenshot of reduced screen"] https://github.com/Shinsensakana/tweeter/blob/master/docs/Screenshot%20from%202020-10-08%2020-53-05.png
