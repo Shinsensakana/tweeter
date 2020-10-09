@@ -6,6 +6,10 @@ nav {
   background-color: #4056A1;
   height: 120px;
   padding: 1.5em;
+  overflow: hidden;
+  position:fixed;
+  top:0;
+  width:100%;
 }
 
 
