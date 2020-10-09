@@ -41,6 +41,7 @@ article {
   border:3px solid darkgrey;
   width:100%;
   margin-bottom: 30px;
+  padding: 10px;
 }
 
 article:hover {
@@ -48,20 +49,20 @@ article:hover {
 }
 
 .handle {
-  display:none;
+  visibility:hidden;
 }
 
 article:hover .handle {
-  display:inline;
+  visibility: visible;
   
 }
 
 .icons {
-  display:none;
+  visibility: hidden;
 }
 
 article:hover .icons {
-  display:inline;
+  visibility: visible;
   
 }
 
@@ -77,36 +78,20 @@ article:hover .icons {
   
 }
 
-.pic-name p {
-  
-}
-
-.handle {
-  
-}
-
-.main-message {
-  margin-left:20px;
-}
 
 hr {
   width: 95%;
   color: darkgrey;
 }
 
-.days-ago {
- 
-  margin-left: 20px;
-}
+
 
 article footer {
   display:flex;
   justify-content: space-between;
 }
 
-.icons {
-  margin-right: 20px;
-}
+
 
 .new-tweet p {
   display:none;
