@@ -20,17 +20,18 @@ body {
   font-size: 24px;
   font-family:"Source Sans Pro", "sans-serif";
 }
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
  main {
-  display:flex;
-  justify-content:center;
+  
   margin-left: 5%;
   margin-right: 5%;
   
 }
+
+
+
 
 
