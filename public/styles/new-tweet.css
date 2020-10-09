@@ -1,9 +1,3 @@
-.new-tweet {
-  display:flex;
-  flex-direction: column;
-  width: 100%;
-  font-family: "Bungee", "cursive";
-}
 
 #compose {
   text-align:center;
@@ -22,7 +16,7 @@
   border-right: none;
   border-left: none;
   font-family:"Source Sans Pro", "sans-serif";
-  margin:0.5em 0 1em 0;
+  
 }
 
 #tweetandcount {
@@ -33,8 +27,96 @@
 #tweetbutton {
   background-color:#4056A1;
   color:white;
+  margin-bottom: 0.5em;
 }
 
 
+.negative {
+  color: red;
+}
 
+article {
+  
+  font-family:"Source Sans Pro", "sans-serif";
+  border:3px solid darkgrey;
+  width:100%;
+  margin-bottom: 30px;
+}
+
+article:hover {
+  box-shadow: 5px 5px  grey;
+}
+
+.handle {
+  display:none;
+}
+
+article:hover .handle {
+  display:inline;
+  
+}
+
+.icons {
+  display:none;
+}
+
+article:hover .icons {
+  display:inline;
+  
+}
+
+.tweet-header {
+  display:flex;
+  justify-content: space-between;
+}
+
+.pic-name {
+  display:flex;
+  justify-content: space-between;
+  
+  
+}
+
+.pic-name p {
+  
+}
+
+.handle {
+  
+}
+
+.main-message {
+  margin-left:20px;
+}
+
+hr {
+  width: 95%;
+  color: darkgrey;
+}
+
+.days-ago {
+ 
+  margin-left: 20px;
+}
+
+article footer {
+  display:flex;
+  justify-content: space-between;
+}
+
+.icons {
+  margin-right: 20px;
+}
+
+.new-tweet p {
+  display:none;
+  width: 100%;
+  height: 50px;
+  border-style: double;
+  padding-top: 10px;
+  text-align: center;
+  background-color:white;
+  color:red;
+  font-family:"Source Sans Pro", "sans-serif";
+} 
 
