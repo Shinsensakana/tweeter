@@ -5,17 +5,28 @@
  */
 
 // to sanitize the input from the user
-const escape = function(str) {
+const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+// to create days ago information on the tweet
+const daysAgo = function (datecreated) {
+
+  const date1 = new Date(datecreated);
+  const date2 = new Date();
+  const dateOfTweet = date2.getTime() - date1.getTime();
+  if (Math.floor(dateOfTweet / (1000 * 3600 * 24)) < 1) {
+    return Math.floor(dateOfTweet / (1000 * 3600)) + " hour(s) ago";
+
+  }
+
+  return Math.floor(dateOfTweet / (1000 * 3600 * 24)) + " days ago";
+};
 
 // creates a html section to append with values from the intial-tweets.json
-const createTweetElement = function(tweetObject) {
-
-
+const createTweetElement = function (tweetObject) {
 
   const $tweet = $(`<article>
   <header class="tweet-header">
@@ -33,7 +44,7 @@ const createTweetElement = function(tweetObject) {
     <hr>
     <footer>
     <div class="days-ago">
-    <p>${new Date(tweetObject.created_at)}</p>
+    <p>${daysAgo(tweetObject.created_at)}</p>
     </div>  
     <div class="icons">  
     <span><i class="fas fa-flag"></i></span>
@@ -47,7 +58,7 @@ const createTweetElement = function(tweetObject) {
 };
 
 //renders the tweets
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   for (let tweet of tweets) {
 
     $('.tweets-container').append(createTweetElement(tweet));
@@ -56,12 +67,12 @@ const renderTweets = function(tweets) {
 };
 
 //to start all the functions after the DOM has loaded
-$(document).ready(function() {
+$(document).ready(function () {
   console.log("DOM has loaded from client.js");
   //to get the tweets from the database via ajax request
-  const loadTweets = function() {
+  const loadTweets = function () {
     $.ajax('/tweets', { method: 'GET' })
-      .then(function(content) {
+      .then(function (content) {
         console.log('Success: ', content);
         renderTweets(content);
       });
@@ -81,10 +92,10 @@ $(document).ready(function() {
     } else {
       $('.new-tweet p').slideUp("slow");
       $.ajax({ method: 'POST', data: data, url: "/tweets" })
-        .then(function() {
+        .then(function () {
 
           $.ajax('/tweets', { method: 'GET' }) //to get the newly posted tweet to put on the top
-            .then(function(content) {
+            .then(function (content) {
 
               $('.tweets-container').prepend(createTweetElement(content[content.length - 1]));
               $('#tweet-text').val(''); //to empty the text area
